@@ -18,18 +18,10 @@ CREATE DATABASE IF NOT EXISTS boo;
 /* DB auswählen */
 USE boo;
 
-
-CREATE TABLE test
-(
-    name VARCHAR(20),
-    age INT    
-
 /*Tabelle anlegen*/
 CREATE TABLE test
-(
-	name VARCHAR(20),
-	age INT	
-
+(	name VARCHAR(20),
+	age INT
 );
 
 /* Alle Tabellen in der DB anzeigen */

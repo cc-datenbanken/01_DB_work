@@ -1,20 +1,13 @@
 /* ------  Strukturen ----- */
 
-<<<<<<< HEAD
+
 /* Kommentar 1 */
 # Zeilenkommentar 1
 -- Zeilenkommentar 2
-=======
-/* Kommentar 1 (Block) */
-# Zeilenkommentar 1
--- Zeilenkommentar 1
-
 
 /* Datenbanken auf Server anzeigen */
 SHOW DATABASES;
 
-<<<<<<< HEAD
-=======
 /* DB boo löschen, falls vorhanden*/
 
 DROP DATABASE IF EXISTS boo;
@@ -25,12 +18,12 @@ CREATE DATABASE IF NOT EXISTS boo;
 /* DB auswählen */
 USE boo;
 
-<<<<<<< HEAD
+
 CREATE TABLE test
 (
     name VARCHAR(20),
     age INT    
-=======
+
 /*Tabelle anlegen*/
 CREATE TABLE test
 (
@@ -42,7 +35,7 @@ CREATE TABLE test
 /* Alle Tabellen in der DB anzeigen */
 SHOW TABLES;
 
-<<<<<<< HEAD
+
 /*Tabelle anlegen*/
 DESCRIBE test;
 
@@ -59,7 +52,7 @@ VALUES ();
 /* ---- Inhalte der Tabelle anzeigen ---- */
 
 SELECT * FROM test;
-=======
+
 /* Struktur der Tabelle anzeigen */
 DESCRIBE test;
 

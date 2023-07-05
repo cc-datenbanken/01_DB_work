@@ -1,4 +1,4 @@
-/* USER TAB. Version 1 */
+/* USER TAB. Version 2 */
 
 /* Table users */
 

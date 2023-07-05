@@ -1,4 +1,4 @@
-/* USER TAB. Version 1 */
+/* USER TAB. Version 3 */
 
 /* Table users */
 
@@ -18,12 +18,36 @@ DESCRIBE boo.users;
 
 /* Daten */
 
-INSERT INTO boo.users(userName,firstName,familyName,userPwd)
-VALUES ("max","Max","Mütze","1234");
-INSERT INTO boo.users(userName,firstName,familyName,userPwd)
-VALUES ("maxine","Maxine","Mützerich","#7xD0");
-INSERT INTO boo.users(userName,firstName,familyName,userPwd)
-VALUES ("maxl","Max","Mütze","user1234");
+INSERT INTO 
+    boo.users(userName,firstName,familyName,userPwd)
+VALUES
+    ("max","Max","Mütze",SHA1("1234"))
+    ;
+INSERT INTO
+    boo.users(userName,firstName,familyName,userPwd)
+VALUES
+    ("maxine","Maxine","Mützerich",SHA1("#7xD0"))
+    ;
+INSERT INTO
+    boo.users(userName,firstName,familyName,userPwd)
+VALUES
+    ("maxl","Max","Mütze",SHA1("user1234"))
+    ;
 
 /* Inhalte : Ergebnistabelle */
 SELECT * FROM boo.users;
+
+ALTER TABLE
+    boo.users
+ADD
+    userPLZ VARCHAR(5) NOT NULL DEFAULT "00000"
+;
+
+UPDATE boo.users SET userPLZ = "70367" WHERE id = 1;
+UPDATE boo.users SET userPLZ = "70367" WHERE userName = "maxl";
+
+DESCRIBE boo.users;
+SELECT * FROM boo.users;
+
+/* Update vo Daten */
+
